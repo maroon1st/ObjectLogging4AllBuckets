@@ -103,7 +103,6 @@ $BUCKETS
 EOS
 
   echo Put Event Selectors: $TRAIL_NAME
-  cat $TMP_FILE
   aws cloudtrail put-event-selectors \
     --region $REGION \
     --cli-input-json "file://${TMP_FILE}" || error_exit
